@@ -3,7 +3,7 @@
 
 <head>
 	
-	<link rel="shortcut icon" href="<?php echo base_url();?>images/favicon.ico" />
+	<!--<link rel="shortcut icon" href="<?php echo base_url();?>images/favicon.ico" />-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 	<meta name="description" content=""/>
 	<meta name="keywords" content="" />
@@ -49,12 +49,13 @@
 		<div id="top">
 
 			<div class="left" id="logo">
-				<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/keuangan-guyub-logo.png" alt="" /></a>
+				<!--<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/keuangan-guyub-logo.png" alt="" /></a>-->
+				<a href="<?php echo base_url();?>"><img src="#" alt="" /></a>
 			</div>
 
 			<div class="left navigation" id="main-nav">
 
-				<p><a href="http://code.google.com/p/keuangan-guyub/">Aplikasi Keuangan Open Source untuk UKM Jasa</a></p>
+				<p><a href="http://code.google.com/p/keuangan-guyub/">Aplikasi Keuangan untuk Koperasi Simpan Pinjam Tetrasma</a></p>
 
 			</div>
 
@@ -96,7 +97,7 @@
 
 							<p class="large">Untuk dapat mengakses aplikasi ini Anda harus login terlebih dahulu.</p>
 
-							<p>Silahkan masukkan Username dan Password Anda dengan benar, dimana khusus untuk Password berlaku aturan case sensitive.</p>
+							<p>Silahkan masukkan Username dan Password Anda dengan benar, di mana khusus untuk Password berlaku aturan case sensitive.</p>
 
 						</div>
 
@@ -176,9 +177,11 @@
 
 		<div class="left" id="footer-left">
 
-			<img src="<?php echo base_url();?>images/logo-small.png" alt="" class="left" />
+			<!--<img src="<?php echo base_url();?>images/logo-small.png" alt="" class="left" />-->
+			<img src="#" alt="" class="left" />
 
-			<p>&copy; <a href="http://guyub.co.id">Guyub Teknologi Nusantara</a> - 2010</p>
+			<!--<p>&copy; <a href="http://guyub.co.id">Guyub Teknologi Nusantara</a> - 2010</p>-->
+			<p>&copy; 2016 <a href="#">Koperasi Tetrasma</a>. All rights reserved. Powered by Selaras Solusindo&trade;.</p>
 
 			<div class="clearer">&nbsp;</div>
 
@@ -186,7 +189,8 @@
 
 		<div class="right" id="footer-right">
 
-			<p class="large"><a href="http://www.gnu.org/licenses/gpl.html">GPL</a> <span class="text-separator">|</span> <a href="http://keuangan.guyub.co.id/kredit/">Kredit</a> <span class="text-separator">|</span> <strong><a href="http://code.google.com/p/keuangan-guyub/issues/list">LaporBugs</a></strong> <span class="text-separator">|</span> <strong><a href="http://groups.google.com/group/keuangan-guyub">MailingList</a></strong> <span class="text-separator">|</span> <a href="http://keuangan.guyub.co.id">Blog</a> <span class="text-separator">|</span> <a href="http://www.facebook.com/pages/Keuangan-Guyub/122152827795291">Fb</a> <span class="text-separator">|</span> <a href="http://twitter.com/keuanganguyub">Tw</a> <span class="text-separator"></p>
+			<!--<p class="large"><a href="http://www.gnu.org/licenses/gpl.html">GPL</a> <span class="text-separator">|</span> <a href="http://keuangan.guyub.co.id/kredit/">Kredit</a> <span class="text-separator">|</span> <strong><a href="http://code.google.com/p/keuangan-guyub/issues/list">LaporBugs</a></strong> <span class="text-separator">|</span> <strong><a href="http://groups.google.com/group/keuangan-guyub">MailingList</a></strong> <span class="text-separator">|</span> <a href="http://keuangan.guyub.co.id">Blog</a> <span class="text-separator">|</span> <a href="http://www.facebook.com/pages/Keuangan-Guyub/122152827795291">Fb</a> <span class="text-separator">|</span> <a href="http://twitter.com/keuanganguyub">Tw</a> <span class="text-separator"></p>-->
+			<p class="large"><a href="http://www.gnu.org/licenses/gpl.html">GPL</a> <span class="text-separator">|</span> <a href="#">Kredit</a> <span class="text-separator">|</span> <strong><a href="#">LaporBugs</a></strong> <span class="text-separator">|</span> <strong><a href="#">MailingList</a></strong> <span class="text-separator">|</span> <a href="#">Blog</a> <span class="text-separator">|</span> <a href="#">Fb</a> <span class="text-separator">|</span> <a href="#">Tw</a> <span class="text-separator"></p>
 
 		</div>
 
