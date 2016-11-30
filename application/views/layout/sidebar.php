@@ -2,6 +2,17 @@
 
 	<?php if($this->session->userdata('ADMIN')) { ?>
 		<div class="section">
+			<div class="section-title">Menu</div>
+			<div class="section-content">
+
+				<ul class="nice-list">
+					<li><?php echo anchor(site_url()."home", 'Home &#187;', 'class="more"'); ?></li>
+				</ul>
+
+			</div>
+		</div>
+	
+		<div class="section">
 
 			<div class="section-title">Manajemen</div>
 
@@ -9,7 +20,7 @@
 
 				<ul class="nice-list">
 					<li><?php echo anchor(site_url()."user", 'Pengguna &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."pajak", 'Data Wajib Pajak &#187;', 'class="more"'); ?></li>
+					<!--<li><?php //echo anchor(site_url()."pajak", 'Data Wajib Pajak &#187;', 'class="more"'); ?></li>-->
 					<li><?php echo anchor(site_url()."akun", 'Akun &#187;', 'class="more"'); ?></li>												
 					<li><?php echo anchor(site_url()."akun/saldo_awal", 'Saldo Awal &#187;', 'class="more"'); ?></li>												
 				</ul>
@@ -36,7 +47,7 @@
 
 		</div>
 		
-		<div class="section">
+		<!--<div class="section">
 
 			<div class="section-title">Proyek</div>
 
@@ -50,7 +61,7 @@
 
 			</div>
 
-		</div>
+		</div>-->
 
 		<div class="section">
 
@@ -60,9 +71,9 @@
 
 				<ul class="nice-list">
 					<li><?php echo anchor(site_url()."laporan_keuangan", 'Laporan Keuangan &#187;', 'class="more"'); ?></li>						
-					<li><?php echo anchor(site_url()."laporan_proyek", 'Laporan Proyek &#187;', 'class="more"'); ?></li>
+					<!--<li><?php echo anchor(site_url()."laporan_proyek", 'Laporan Proyek &#187;', 'class="more"'); ?></li>
 					<li><?php echo anchor(site_url()."laporan_ssp", 'Laporan Pajak SSP &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."laporan_pph21", 'Laporan Pajak PPh 21 &#187;', 'class="more"'); ?></li>						
+					<li><?php echo anchor(site_url()."laporan_pph21", 'Laporan Pajak PPh 21 &#187;', 'class="more"'); ?></li>-->
 				</ul>
 
 			</div>
