@@ -49,13 +49,14 @@
 		<div id="top">
 
 			<div class="left" id="logo">
-				<!--<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/keuangan-guyub-logo.png" alt="" /></a>-->
-				<a href="<?php echo base_url();?>"><img src="#" alt="" /></a>
+				<!--<a href="<?php //echo base_url();?>"><img src="<?php //echo base_url();?>images/keuangan-guyub-logo.png" alt="" /></a>-->
+				<a href="#"><img src="#" alt="" /></a>
 			</div>
 
 			<div class="left navigation" id="main-nav">
 
-				<p><a href="http://code.google.com/p/keuangan-guyub/">Aplikasi Keuangan untuk Koperasi Simpan Pinjam Tetrasma</a></p>
+				<!--<p><a href="http://code.google.com/p/keuangan-guyub/">Aplikasi Keuangan untuk Koperasi Simpan Pinjam Tetrasma</a></p>-->
+				<p><a href="#">Aplikasi Keuangan untuk Koperasi Simpan Pinjam Tetrasma</a></p>
 
 			</div>
 

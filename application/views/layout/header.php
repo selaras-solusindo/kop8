@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 
 <head>
-	<link rel="shortcut icon" href="<?php echo base_url();?>images/favicon.ico" />
+	<!--<link rel="shortcut icon" href="<?php echo base_url();?>images/favicon.ico" />-->
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 	<meta name="description" content=""/>
 	<meta name="keywords" content="" />
 	<meta name="author" content="" />
 	
-	<base href="<?= $this->config->item('base_url') ?>" />
+	<base href="<?php echo base_url(); ?>" />
 
 	<style type="text/css" title="currentStyle">
 			@import "<?php echo base_url();?>css/style.css";
@@ -123,11 +123,13 @@
 
 		<div id="top">
 			<div class="left" id="logo">
-				<a href="<?php echo site_url();?>home"><img src="<?php echo base_url();?>images/keuangan-guyub-logo.png" alt="" /></a>
+				<!--<a href="<?php //echo base_url();?>"><img src="<?php //echo base_url();?>images/keuangan-guyub-logo.png" alt="" /></a>-->
+				<a href="#"><img src="#" alt="" /></a>
 			</div>
 			<div class="left navigation" id="main-nav">
 
-				<p><a href="http://code.google.com/p/keuangan-guyub/">Aplikasi Keuangan Open Source untuk UKM Jasa</a></p>
+				<!--<p><a href="http://code.google.com/p/keuangan-guyub/">Aplikasi Keuangan untuk Koperasi Simpan Pinjam Tetrasma</a></p>-->
+				<p><a href="<?php echo site_url(); ?>home">Aplikasi Keuangan untuk Koperasi Simpan Pinjam Tetrasma</a></p>
 
 			</div>
 			<div class="clearer">&nbsp;</div>

@@ -10,9 +10,9 @@
 	<script type="text/javascript">
             swfobject.embedSWF(
               "swf/open-flash-chart.swf", "grafik_laba_rugi",
-              "<?= $chart_width ?>", "<?= $chart_height ?>",
+              "<?php echo $chart_width ?>", "<?php echo $chart_height ?>",
               "9.0.0", "expressInstall.swf",
-              {"data-file":"<?= urlencode($data_url) ?>"}
+              {"data-file":"<?php echo urlencode($data_url) ?>"}
             );
     </script>
 	
