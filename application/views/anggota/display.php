@@ -25,7 +25,7 @@
 				<th>No. Anggota</th>
 				<th>Nama</th>
 				<th>Alamat</th>
-				<th>Telpon</th>
+				<th>No. Telepon</th>
 				<th>Cek</th>
 			</tr>
 		</thead>						
@@ -53,7 +53,7 @@
 				<th>No. Anggota</th>
 				<th>Nama</th>
 				<th>Alamat</th>
-				<th>Telpon</th>
+				<th>No. Telepon</th>
 				<th>Cek</th>
 			</tr>
 		</tfoot>

@@ -26,6 +26,17 @@
 	
 	<table width="300" border="0" align="center" cellpadding="2" cellspacing="0">						  
 		<tr>
+			<th><?php echo form_label('No. Anggota *','no_anggota'); ?></th>
+			<td>
+				<?php 
+					$data['name'] = $data['id'] = 'no_anggota';
+					$data['value'] = (set_value('no_anggota')) ? set_value('no_anggota') : $client_data['no_anggota'];
+					$data['title'] = "No. Anggota tidak boleh kosong";
+					echo form_input($data);
+				?>
+			</td>
+		</tr>
+		<tr>
 			<th><?php echo form_label('Nama *','nama'); ?></th>
 			<td>
 				<?php 
@@ -36,7 +47,7 @@
 				?>
 			</td>
 		</tr>	
-		<tr>
+		<!--<tr>
 			<th><?php echo form_label('NPWP','npwp'); ?></th>
 			<td>
 				<?php 
@@ -90,7 +101,7 @@
 					echo form_input($nomor);
 				?>							
 			</td>
-		</tr>						
+		</tr>-->
 		<tr>
 			<th><?php echo form_label('Alamat *','alamat'); ?></th>
 			<td>
