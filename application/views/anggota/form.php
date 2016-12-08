@@ -114,7 +114,7 @@
 			</td>
 		</tr>									
 		<tr>
-			<th><?php echo form_label('Telpon *','telpon'); ?></th>
+			<th><?php echo form_label('No. Telepon *','telpon'); ?></th>
 			<td>
 				<?php 
 					$data['name'] = $data['id'] = 'telpon';
@@ -126,7 +126,7 @@
 		</tr>		
 		</tr>
 		<tr>
-			<th><?php echo form_label('Handphone','handphone'); ?></th>
+			<th><?php echo form_label('No. Handphone','handphone'); ?></th>
 			<td>
 				<?php 
 					$data['name'] = $data['id'] = 'handphone';
@@ -147,7 +147,7 @@
 				?>
 			</td>
 		</tr>		
-		<tr>
+		<!--<tr>
 			<th><?php echo form_label('Fax','fax'); ?></th>
 			<td>
 				<?php 
@@ -157,7 +157,7 @@
 					echo form_input($data);
 				?>
 			</td>
-		</tr>	
+		</tr>-->
 		<tr>
 			<th><?php echo form_label('Website','website'); ?></th>
 			<td>
