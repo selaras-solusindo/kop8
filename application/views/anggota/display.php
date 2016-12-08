@@ -22,6 +22,7 @@
 	<table cellpadding="0" cellspacing="0" border="0" class="display" id="display_table">
 		<thead>
 			<tr>
+				<th>No. Anggota</th>
 				<th>Nama</th>
 				<th>Alamat</th>
 				<th>Telpon</th>
@@ -36,6 +37,7 @@
 					foreach ($client_data as $row)
 					{
 						echo '<tr>';
+						echo '<td>'.$row->no_anggota.'</td>';
 						echo '<td>'.$row->nama.'</td>';
 						echo '<td>'.$row->alamat.'</td>';
 						echo '<td>'.$row->telpon_1.'</td>';
@@ -48,6 +50,7 @@
 		</tbody>
 		<tfoot>
 			<tr>
+				<th>No. Anggota</th>
 				<th>Nama</th>
 				<th>Alamat</th>
 				<th>Telpon</th>
