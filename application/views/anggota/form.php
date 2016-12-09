@@ -46,7 +46,18 @@
 					echo form_input($data);
 				?>
 			</td>
-		</tr>	
+		</tr>
+		<tr>
+			<th><?php echo form_label('Tanggal Masuk *','tgl_masuk'); ?></th>
+			<td>
+				<?php 
+					$data['name'] = 'tgl_masuk';
+					$data['id'] = 'datepicker';
+					$data['title'] = "Tanggal tidak boleh kosong dan harus diisi dengan format dddd-mm-yy";	
+					echo form_input($data);
+				?>
+			</td>				 
+		</tr>
 		<!--<tr>
 			<th><?php echo form_label('NPWP','npwp'); ?></th>
 			<td>
@@ -112,9 +123,20 @@
 					echo form_input($data);
 				?>
 			</td>
-		</tr>									
+		</tr>
 		<tr>
-			<th><?php echo form_label('No. Telepon *','telpon'); ?></th>
+			<th><?php echo form_label('Kota *','kota'); ?></th>
+			<td>
+				<?php 
+					$data['name'] = $data['id'] = 'kota';
+					$data['value'] = (set_value('kota')) ? set_value('kota') : $client_data['kota'];
+					$data['title'] = "Kota tidak boleh kosong";						
+					echo form_input($data);
+				?>
+			</td>
+		</tr>
+		<tr>
+			<th><?php echo form_label('No. Telepon *','telpon_1'); ?></th>
 			<td>
 				<?php 
 					$data['name'] = $data['id'] = 'telpon';
@@ -126,11 +148,44 @@
 		</tr>		
 		</tr>
 		<tr>
-			<th><?php echo form_label('No. Handphone','handphone'); ?></th>
+			<th><?php echo form_label('No. Handphone *','telpon_2'); ?></th>
 			<td>
 				<?php 
-					$data['name'] = $data['id'] = 'handphone';
-					$data['value'] = (set_value('handphone')) ? set_value('handphone') : $client_data['telpon_2'];
+					$data['name'] = $data['id'] = 'telpon_2';
+					$data['value'] = (set_value('telpon_2')) ? set_value('telpon_2') : $client_data['telpon_2'];
+					unset($data['title']);
+					echo form_input($data);
+				?>
+			</td>
+		</tr>
+		<tr>
+			<th><?php echo form_label('Pekerjaan','pekerjaan'); ?></th>
+			<td>
+				<?php 
+					$data['name'] = $data['id'] = 'pekerjaan';
+					$data['value'] = (set_value('pekerjaan')) ? set_value('pekerjaan') : $client_data['pekerjaan'];
+					unset($data['title']);
+					echo form_input($data);
+				?>
+			</td>
+		</tr>
+		<tr>
+			<th><?php echo form_label('Jenis ID','jns_id'); ?></th>
+			<td>
+				<?php 
+					$data['name'] = $data['id'] = 'jns_id';
+					$data['value'] = (set_value('jns_id')) ? set_value('jns_id') : $client_data['jns_id'];
+					unset($data['title']);
+					echo form_input($data);
+				?>
+			</td>
+		</tr>
+		<tr>
+			<th><?php echo form_label('No. ID','no_id'); ?></th>
+			<td>
+				<?php 
+					$data['name'] = $data['id'] = 'no_id';
+					$data['value'] = (set_value('no_id')) ? set_value('no_id') : $client_data['no_id'];
 					unset($data['title']);
 					echo form_input($data);
 				?>
