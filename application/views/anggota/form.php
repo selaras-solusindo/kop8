@@ -114,27 +114,27 @@
 			</td>
 		</tr>									
 		<tr>
-			<th><?php echo form_label('No. Telepon *','telpon'); ?></th>
+			<th><?php echo form_label('No. Handphone *','telpon_1'); ?></th>
 			<td>
 				<?php 
-					$data['name'] = $data['id'] = 'telpon';
-					$data['value'] = (set_value('telpon')) ? set_value('telpon') : $client_data['telpon_1'];
-					$data['title'] = "Telpon tidak boleh kosong";
+					$data['name'] = $data['id'] = 'telpon_1';
+					$data['value'] = (set_value('telpon_1')) ? set_value('telpon_1') : $client_data['telpon_1'];
+					$data['title'] = "No. Handphone tidak boleh kosong";
 					echo form_input($data);
 				?>
 			</td>
-		</tr>		
 		</tr>
 		<tr>
-			<th><?php echo form_label('No. Handphone','handphone'); ?></th>
+			<th><?php echo form_label('No. Telepon','telpon_2'); ?></th>
 			<td>
 				<?php 
-					$data['name'] = $data['id'] = 'handphone';
-					$data['value'] = (set_value('handphone')) ? set_value('handphone') : $client_data['telpon_2'];
+					$data['name'] = $data['id'] = 'telpon_2';
+					$data['value'] = (set_value('telpon_2')) ? set_value('telpon_2') : $client_data['telpon_2'];
 					unset($data['title']);
 					echo form_input($data);
 				?>
 			</td>
+		</tr>		
 		</tr>
 		<tr>
 			<th><?php echo form_label('Email','email'); ?></th>
