@@ -136,11 +136,7 @@
 			</td>
 		</tr>
 		<tr>
-<<<<<<< HEAD
-			<th><?php echo form_label('No. Telepon *','telpon_1'); ?></th>
-=======
 			<th><?php echo form_label('No. Handphone *','telpon_1'); ?></th>
->>>>>>> origin/master
 			<td>
 				<?php 
 					$data['name'] = $data['id'] = 'telpon_1';
@@ -151,8 +147,7 @@
 			</td>
 		</tr>
 		<tr>
-<<<<<<< HEAD
-			<th><?php echo form_label('No. Handphone *','telpon_2'); ?></th>
+			<th><?php echo form_label('No. Telepon','telpon_2'); ?></th>
 			<td>
 				<?php 
 					$data['name'] = $data['id'] = 'telpon_2';
@@ -190,13 +185,6 @@
 				<?php 
 					$data['name'] = $data['id'] = 'no_id';
 					$data['value'] = (set_value('no_id')) ? set_value('no_id') : $client_data['no_id'];
-=======
-			<th><?php echo form_label('No. Telepon','telpon_2'); ?></th>
-			<td>
-				<?php 
-					$data['name'] = $data['id'] = 'telpon_2';
-					$data['value'] = (set_value('telpon_2')) ? set_value('telpon_2') : $client_data['telpon_2'];
->>>>>>> origin/master
 					unset($data['title']);
 					echo form_input($data);
 				?>
