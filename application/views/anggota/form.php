@@ -53,7 +53,9 @@
 				<?php 
 					$data['name'] = 'tgl_masuk';
 					$data['id'] = 'datepicker';
+					$data['value'] = (set_value('tgl_masuk')) ? set_value('tgl_masuk') : $client_data['tgl_masuk'];
 					//$data['title'] = "Tanggal Masuk tidak boleh kosong dan harus diisi dengan format dddd-mm-yy";	
+					unset($data['title']);
 					echo form_input($data);
 				?>
 			</td>				 
@@ -108,7 +110,7 @@
 				<?php 
 					$data['name'] = $data['id'] = 'pekerjaan';
 					$data['value'] = (set_value('pekerjaan')) ? set_value('pekerjaan') : $client_data['pekerjaan'];
-					unset($data['title']);
+					//unset($data['title']);
 					echo form_input($data);
 				?>
 			</td>
@@ -119,7 +121,7 @@
 				<?php 
 					$data['name'] = $data['id'] = 'jns_id';
 					$data['value'] = (set_value('jns_id')) ? set_value('jns_id') : $client_data['jns_id'];
-					unset($data['title']);
+					//unset($data['title']);
 					echo form_input($data);
 				?>
 			</td>
@@ -130,7 +132,7 @@
 				<?php 
 					$data['name'] = $data['id'] = 'no_id';
 					$data['value'] = (set_value('no_id')) ? set_value('no_id') : $client_data['no_id'];
-					unset($data['title']);
+					//unset($data['title']);
 					echo form_input($data);
 				?>
 			</td>
@@ -142,7 +144,7 @@
 				<?php 
 					$data['name'] = $data['id'] = 'email';
 					$data['value'] = (set_value('email')) ? set_value('email') : $client_data['email'];
-					unset($data['title']); //$data['title'] = "Email harus diisi dengan format email yang benar. Contoh : user@tetrasma.co.id";
+					//unset($data['title']); //$data['title'] = "Email harus diisi dengan format email yang benar. Contoh : user@tetrasma.co.id";
 					echo form_input($data);
 				?>
 			</td>
