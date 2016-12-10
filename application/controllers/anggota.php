@@ -1,6 +1,6 @@
 <?php
 
-class Anggota extends Controller {
+  class Anggota extends Controller {
 
 	function Anggota()
 	{

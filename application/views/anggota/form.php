@@ -53,7 +53,7 @@
 				<?php 
 					$data['name'] = 'tgl_masuk';
 					$data['id'] = 'datepicker';
-					$data['title'] = "Tanggal tidak boleh kosong dan harus diisi dengan format dddd-mm-yy";	
+					$data['title'] = "Tanggal Masuk tidak boleh kosong dan harus diisi dengan format dddd-mm-yy";	
 					echo form_input($data);
 				?>
 			</td>				 
@@ -190,14 +190,14 @@
 				?>
 			</td>
 		</tr>		
-		</tr>
+		<!--</tr>-->
 		<tr>
 			<th><?php echo form_label('Email','email'); ?></th>
 			<td>
 				<?php 
 					$data['name'] = $data['id'] = 'email';
 					$data['value'] = (set_value('email')) ? set_value('email') : $client_data['email'];
-					$data['title'] = "Email harus diisi dengan format email yang benar. Contoh : keuangan@guyub.co.id";			
+					unset($data['title']); //$data['title'] = "Email harus diisi dengan format email yang benar. Contoh : user@tetrasma.co.id";
 					echo form_input($data);
 				?>
 			</td>
@@ -243,11 +243,11 @@
 			{ 
 				echo form_submit('simpan','Simpan', "id = 'button-save'" );
 				echo form_reset('reset','Reset', "id = 'button-reset'" );
-				echo form_button(array('id' => 'button-cancel', 'content' => 'Batal', 'onClick' => "location.href='".site_url()."klien'" ));
+				echo form_button(array('id' => 'button-cancel', 'content' => 'Batal', 'onClick' => "location.href='".site_url()."anggota'" ));
 			}
 			else
 			{
-				echo form_button(array('id' => 'button-cancel', 'content' => 'Kembali', 'onClick' => "location.href='".site_url()."klien'" ));
+				echo form_button(array('id' => 'button-cancel', 'content' => 'Kembali', 'onClick' => "location.href='".site_url()."anggota'" ));
 			}
 		?>				
 	</div>
@@ -265,16 +265,18 @@
 			wrapper: "li",
 			rules: 
 			{
-				nama: "required",
-				npwp: "digits",
+				no_anggota: "required",
+				nama      : "required",
+				tgl_masuk : "required",
+				alamat    : "required",
+				kota      : "required",
+				telpon_1  : "required",
+				/*npwp: "digits",
 				npwp1: "digits",
 				npwp2: "digits",
 				npwp3: "digits",
 				npwp4: "digits",
-				npwp5: "digits",
-				alamat: "required",
-				telpon: "required",
-				email: "email"
+				npwp5: "digits",*/
 			}
 		});
 	});
