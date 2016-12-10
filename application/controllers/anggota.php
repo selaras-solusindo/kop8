@@ -12,7 +12,7 @@ class Anggota extends Controller {
 	
 	function index()
 	{
-		$data['title'] = "Display Anggota";
+		$data['title'] = "Daftar Anggota";
 		$data['main_content'] = 'anggota/display';
 		$data['client_data'] = $this->anggota_model->get_all_data();
 		$this->load->view('layout/template', $data);
