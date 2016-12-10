@@ -122,7 +122,7 @@
 	function delete()
 	{
 		$id = $this->input->post('id');
-		$klien_data = $this->anggota_model->get_data_by_id($id);
+		$anggota_data = $this->anggota_model->get_data_by_id($id);
 		if($this->_check_project_exist($id))
 		{
 			$msg = 'E#Klien '.$klien_data['nama'].' tidak dapat dihapus karena telah digunakan pada proyek.';
@@ -131,11 +131,11 @@
 		{
 			if($this->anggota_model->delete_data($id))
 			{
-				$msg = 'S#Klien '.$klien_data['nama'].' telah dihapus.';
+				$msg = 'S#Anggota '.$anggota_data['nama'].' telah dihapus.';
 			}
 			else
 			{
-				$msg .= 'E#Terjadi kesalahan dalam menghapus data klien '.$klien_data['nama'].'. Harap coba lagi.';
+				$msg .= 'E#Terjadi kesalahan dalam menghapus data anggota '.$anggota_data['nama'].'. Harap coba lagi.';
 			}
 		}
 		echo $msg;
