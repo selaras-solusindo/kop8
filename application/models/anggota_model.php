@@ -37,8 +37,9 @@ class Anggota_model extends Model {
 	function fill_data()
 	{
 		$this->data = array(
+			'no_anggota' => $this->input->post('no_anggota'),
 			'nama' => $this->input->post('nama'),
-			'npwp' => $this->input->post('npwp').$this->input->post('npwp1').$this->input->post('npwp2').$this->input->post('npwp3').$this->input->post('npwp4').$this->input->post('npwp5'),
+			//'npwp' => $this->input->post('npwp').$this->input->post('npwp1').$this->input->post('npwp2').$this->input->post('npwp3').$this->input->post('npwp4').$this->input->post('npwp5'),
 			'alamat' => $this->input->post('alamat'),			
 			'telpon_1' => $this->input->post('telpon'),
 			'telpon_2' => $this->input->post('handphone'),
