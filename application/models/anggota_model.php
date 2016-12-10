@@ -42,6 +42,7 @@ class Anggota_model extends Model {
 			'tgl_masuk' => $this->input->post('tgl_masuk'),
 			//'npwp' => $this->input->post('npwp').$this->input->post('npwp1').$this->input->post('npwp2').$this->input->post('npwp3').$this->input->post('npwp4').$this->input->post('npwp5'),
 			'alamat' => $this->input->post('alamat'),
+			'kota' => $this->input->post('kota'),
 			'telpon_1' => $this->input->post('telpon_1'),
 			'telpon_2' => $this->input->post('telpon_2'),
 			'pekerjaan' => $this->input->post('pekerjaan'),

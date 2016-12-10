@@ -98,8 +98,14 @@
 		else
 		{
 			$this->anggota_model->fill_data();
+			//cek no_anggota
+			if(!$this->anggota_model->check_no_anggota($id))
+			{
+				$this->session->set_userdata('ERRMSG_ARR', 'Nomor Anggota telah digunakan');
+				$this->add();
+			}
 			//Cek Akun
-			if(!$this->anggota_model->check_name($id))
+			elseif(!$this->anggota_model->check_name($id))
 			{
 				$this->session->set_userdata('ERRMSG_ARR', 'Nama Anggota telah digunakan');
 				$this->edit();
