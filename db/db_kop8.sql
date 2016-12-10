@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 10, 2016 at 09:28 AM
+-- Generation Time: Dec 11, 2016 at 02:37 AM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `anggota` (
   `website` varchar(100) NOT NULL DEFAULT '',
   `keterangan` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `anggota`
