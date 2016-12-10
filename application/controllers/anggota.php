@@ -146,16 +146,19 @@
 
 	function _anggota_validation()
 	{	
+		$this->form_validation->set_rules('no_anggota', 'No. Anggota', 'trim|required');
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
-		$this->form_validation->set_rules('npwp', 'NPWP', 'trim|numeric');		
+		$this->form_validation->set_rules('tgl_masuk', 'Tanggal Masuk', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('kota', 'Kota', 'trim|required');
+		$this->form_validation->set_rules('telpon_1', 'No. Handphone', 'trim|required');
+		/*$this->form_validation->set_rules('npwp', 'NPWP', 'trim|numeric');		
 		$this->form_validation->set_rules('npwp1', 'NPWP', 'trim|numeric');		
 		$this->form_validation->set_rules('npwp2', 'NPWP', 'trim|numeric');		
 		$this->form_validation->set_rules('npwp3', 'NPWP', 'trim|numeric');		
 		$this->form_validation->set_rules('npwp4', 'NPWP', 'trim|numeric');		
-		$this->form_validation->set_rules('npwp5', 'NPWP', 'trim|numeric');		
-		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
-		$this->form_validation->set_rules('telpon', 'Telpon', 'trim|required');
-		$this->form_validation->set_rules('email', 'Email', 'trim|valid_email');
+		$this->form_validation->set_rules('npwp5', 'NPWP', 'trim|numeric');*/
+		//$this->form_validation->set_rules('email', 'Email', 'trim|valid_email');
 	
 		return $this->form_validation->run();
 	}
