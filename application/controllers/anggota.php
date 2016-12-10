@@ -66,8 +66,14 @@
 		else
 		{
 			$this->anggota_model->fill_data();
+			//cek no_anggota
+			if(!$this->anggota_model->check_no_anggota())
+			{
+				$this->session->set_userdata('ERRMSG_ARR', 'Nomor Anggota telah digunakan');
+				$this->add();
+			}
 			//Cek Akun
-			if(!$this->anggota_model->check_name())
+			elseif(!$this->anggota_model->check_name())
 			{
 				$this->session->set_userdata('ERRMSG_ARR', 'Nama Anggota telah digunakan');
 				$this->add();
@@ -148,7 +154,7 @@
 	{	
 		$this->form_validation->set_rules('no_anggota', 'No. Anggota', 'trim|required');
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
-		$this->form_validation->set_rules('tgl_masuk', 'Tanggal Masuk', 'trim|required');
+		//$this->form_validation->set_rules('tgl_masuk', 'Tanggal Masuk', 'trim|required');
 		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
 		$this->form_validation->set_rules('kota', 'Kota', 'trim|required');
 		$this->form_validation->set_rules('telpon_1', 'No. Handphone', 'trim|required');

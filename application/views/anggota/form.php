@@ -48,71 +48,16 @@
 			</td>
 		</tr>
 		<tr>
-			<th><?php echo form_label('Tanggal Masuk *','tgl_masuk'); ?></th>
+			<th><?php echo form_label('Tanggal Masuk','tgl_masuk'); ?></th>
 			<td>
 				<?php 
 					$data['name'] = 'tgl_masuk';
 					$data['id'] = 'datepicker';
-					$data['title'] = "Tanggal Masuk tidak boleh kosong dan harus diisi dengan format dddd-mm-yy";	
+					//$data['title'] = "Tanggal Masuk tidak boleh kosong dan harus diisi dengan format dddd-mm-yy";	
 					echo form_input($data);
 				?>
 			</td>				 
 		</tr>
-		<!--<tr>
-			<th><?php echo form_label('NPWP','npwp'); ?></th>
-			<td>
-				<?php 
-					$nomor['title'] = "NPWP harus diisi dengan angka";	
-					if ($act == 'view') $nomor['disabled'] = TRUE;
-
-					$nomor['name'] = $nomor['id'] = 'npwp';
-					$nomor['maxlength']='2';
-					$nomor['size']='4';
-					$nomor['value'] = (set_value('npwp')) ? set_value('npwp') : substr($client_data['npwp'], 0, 2);
-					echo form_input($nomor);
-
-					echo "&nbsp;.";
-
-					$nomor['name'] = $nomor['id'] = 'npwp1';
-					$nomor['maxlength']='3';
-					$nomor['size']='5';
-					$nomor['value'] = (set_value('npwp1')) ? set_value('npwp1') : substr($client_data['npwp'], 2, 3);
-					echo form_input($nomor);
-
-					echo "&nbsp;.";
-
-					$nomor['name'] = $nomor['id'] = 'npwp2';
-					$nomor['maxlength']='3';
-					$nomor['size']='5';
-					$nomor['value'] = (set_value('npwp2')) ? set_value('npwp2') : substr($client_data['npwp'], 5, 3);
-					echo form_input($nomor);
-
-					echo "&nbsp;.";
-
-					$nomor['name'] = $nomor['id'] = 'npwp3';
-					$nomor['maxlength']='1';
-					$nomor['size']='2';
-					$nomor['value'] = (set_value('npwp3')) ? set_value('npwp3') : substr($client_data['npwp'], 8, 1);
-					echo form_input($nomor);
-
-					echo "&nbsp;-";
-
-					$nomor['name'] = $nomor['id'] = 'npwp4';
-					$nomor['maxlength']='3';
-					$nomor['size']='5';
-					$nomor['value'] = (set_value('npwp4')) ? set_value('npwp4') : substr($client_data['npwp'], 9, 3);
-					echo form_input($nomor);
-
-					echo "&nbsp;.";
-
-					$nomor['name'] = $nomor['id'] = 'npwp5';
-					$nomor['maxlength']='3';
-					$nomor['size']='5';
-					$nomor['value'] = (set_value('npwp5')) ? set_value('npwp5') : substr($client_data['npwp'], 12, 3);
-					echo form_input($nomor);
-				?>							
-			</td>
-		</tr>-->
 		<tr>
 			<th><?php echo form_label('Alamat *','alamat'); ?></th>
 			<td>
@@ -202,17 +147,6 @@
 				?>
 			</td>
 		</tr>		
-		<!--<tr>
-			<th><?php echo form_label('Fax','fax'); ?></th>
-			<td>
-				<?php 
-					$data['name'] = $data['id'] = 'fax';
-					$data['value'] = (set_value('fax')) ? set_value('fax') : $client_data['fax'];
-					unset($data['title']);
-					echo form_input($data);
-				?>
-			</td>
-		</tr>-->
 		<tr>
 			<th><?php echo form_label('Website','website'); ?></th>
 			<td>
@@ -267,7 +201,6 @@
 			{
 				no_anggota: "required",
 				nama      : "required",
-				tgl_masuk : "required",
 				alamat    : "required",
 				kota      : "required",
 				telpon_1  : "required",
