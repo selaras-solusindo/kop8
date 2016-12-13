@@ -17,7 +17,6 @@
 			<div class="section-content">
 				<ul class="nice-list">
 					<li><?php echo anchor(site_url()."anggota", 'Anggota &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."jenis_simpanan", 'Jenis Simpanan &#187;', 'class="more"'); ?></li>
 					<li><?php echo anchor(site_url()."user", 'Pengguna &#187;', 'class="more"'); ?></li>
 					<!--<li><?php //echo anchor(site_url()."pajak", 'Data Wajib Pajak &#187;', 'class="more"'); ?></li>-->
 					<li><?php echo anchor(site_url()."akun", 'Akun &#187;', 'class="more"'); ?></li>												

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 11, 2016 at 02:37 AM
+-- Generation Time: Dec 14, 2016 at 03:16 AM
 -- Server version: 5.1.41
 -- PHP Version: 5.3.1
 
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `akun` (
   `kode` varchar(5) NOT NULL DEFAULT '',
   `kelompok_akun_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `pajak` tinyint(1) NOT NULL DEFAULT '1',
+  `simpanan` tinyint(1) NOT NULL DEFAULT '1',
   `saldo_awal` bigint(20) NOT NULL DEFAULT '0',
   `saldo` bigint(20) NOT NULL DEFAULT '0',
   `keterangan` text NOT NULL,
@@ -65,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `anggota` (
   `website` varchar(100) NOT NULL DEFAULT '',
   `keterangan` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `anggota`

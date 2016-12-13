@@ -16,7 +16,14 @@ class Akun_model extends Model {
 
 	function get_all_data()
 	{
-		$this->db->select('akun.id, akun.nama, akun.kode, akun.saldo_awal, akun.saldo, akun.kelompok_akun_id, kelompok_akun.nama AS groups_name');
+		$this->db->select('
+			akun.id, 
+			akun.nama, 
+			akun.kode, 
+			akun.saldo_awal, 
+			akun.saldo, 
+			akun.kelompok_akun_id, 
+			kelompok_akun.nama AS groups_name');
 		$this->db->from('akun');
 		$this->db->join('kelompok_akun', 'akun.kelompok_akun_id=kelompok_akun.id', 'INNER');
 		$query = $this->db->get();
@@ -99,6 +106,7 @@ class Akun_model extends Model {
 			'kode' => $this->input->post('kode'),
 			'kelompok_akun_id' => $this->input->post('kelompok'),			
 			'pajak' => $this->input->post('pajak'),
+			'simpanan' => $this->input->post('simpanan'),
 			'keterangan' => $this->input->post('keterangan')
 		);
 	}
