@@ -11,106 +11,106 @@
 	<base href="<?php echo base_url(); ?>" />
 
 	<style type="text/css" title="currentStyle">
-			@import "<?php echo base_url();?>css/style.css";
-			@import "<?php echo base_url();?>css/demo_page.css";
-			@import "<?php echo base_url();?>css/demo_table.css";
-			@import "<?php echo base_url();?>css/demo_table_jui.css";
-			@import "<?php echo base_url();?>css/gf-theme/jquery.ui.all.css";
-			@import "<?php echo base_url();?>css/demos.css";
-		</style>
+		@import "<?php echo base_url();?>css/style.css";
+		@import "<?php echo base_url();?>css/demo_page.css";
+		@import "<?php echo base_url();?>css/demo_table.css";
+		@import "<?php echo base_url();?>css/demo_table_jui.css";
+		@import "<?php echo base_url();?>css/gf-theme/jquery.ui.all.css";
+		@import "<?php echo base_url();?>css/demos.css";
+	</style>
 
-		<script type="text/javascript" src="<?php echo base_url();?>js/action.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.datepicker.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.datepicker-id.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.button.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.dialog.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/additional-methods.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui-1.8rc3.custom.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>js/swfobject.js"></script>
-		<script type="text/javascript">
-		$(function() {
-			$("#datepicker").datepicker({
-				dateFormat: "yy-mm-dd",
-				regional: "id"
-			});
+	<script type="text/javascript" src="<?php echo base_url();?>js/action.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.datepicker.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.datepicker-id.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.button.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.ui.dialog.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/additional-methods.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui-1.8rc3.custom.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/swfobject.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$("#datepicker").datepicker({
+			dateFormat: "yy-mm-dd",
+			regional: "id"
 		});
-		</script>
-		<script type="text/javascript">
-		$(function() {
-			var dates = $('#datepicker-from, #datepicker-to').datepicker({
-				defaultDate: "+1w",
-				dateFormat: "yy-mm-dd",
-				regional: "id",
-				changeMonth: true,
-				numberOfMonths: 3,
-				onSelect: function(selectedDate) {
-					var option = this.id == "datepicker-from" ? "minDate" : "maxDate";
-					var instance = $(this).data("datepicker");
-					var date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
-					dates.not(this).datepicker("option", option, date);
-				}
-			});
+	});
+	</script>
+	<script type="text/javascript">
+	$(function() {
+		var dates = $('#datepicker-from, #datepicker-to').datepicker({
+			defaultDate: "+1w",
+			dateFormat: "yy-mm-dd",
+			regional: "id",
+			changeMonth: true,
+			numberOfMonths: 3,
+			onSelect: function(selectedDate) {
+				var option = this.id == "datepicker-from" ? "minDate" : "maxDate";
+				var instance = $(this).data("datepicker");
+				var date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
+				dates.not(this).datepicker("option", option, date);
+			}
 		});
-		</script>
-		<script type="text/javascript" charset="utf-8">
-		$(function() {
-				$('#button-view').button({
-					icons: {
-						primary: 'ui-icon-document'
-					}
-				});
-				$('#button-edit').button({
-					icons: {
-						primary: 'ui-icon-pencil'
-					}
-				});
-				$('#button-delete').button({
-					icons: {
-						primary: 'ui-icon-trash'
-					}
-				});
-				$('#button-addnew').button({
-					icons: {
-						primary: 'ui-icon-plus'
-					}
-				});
-				$('#button-save').button();
-				$('#button-cancel').button();
-				$('#button-print').button();
-				$('#button-reset').button();
+	});
+	</script>
+	<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$('#button-view').button({
+			icons: {
+				primary: 'ui-icon-document'
+			}
+		});
+		$('#button-edit').button({
+			icons: {
+				primary: 'ui-icon-pencil'
+			}
+		});
+		$('#button-delete').button({
+			icons: {
+				primary: 'ui-icon-trash'
+			}
+		});
+		$('#button-addnew').button({
+			icons: {
+				primary: 'ui-icon-plus'
+			}
+		});
+		$('#button-save').button();
+		$('#button-cancel').button();
+		$('#button-print').button();
+		$('#button-reset').button();
+	});
+	</script>
+	<script type="text/javascript" charset="utf-8">
+		var oTable;
+		var oDialog;
+
+		$(document).ready(function() {
+
+			oTable = $('#display_table').dataTable({
+				"bJQueryUI": true,
+				"sPaginationType": "full_numbers"
 			});
-		</script>
-		<script type="text/javascript" charset="utf-8">
-			var oTable;
-			var oDialog;
 
-			$(document).ready(function() {
-
-				oTable = $('#display_table').dataTable({
-					"bJQueryUI": true,
-					"sPaginationType": "full_numbers"
-				});
-
-				oDialog = $('<div></div>')
-					.dialog({
-						autoOpen: false,
-						title: 'Konfirmasi',
-						resizable: false,
-						width: 500,
-						height: 150,
-						modal: true,
-						buttons: {
-							OK: function() {
-								$(this).dialog('close');
-							}
+			oDialog = $('<div></div>')
+				.dialog({
+					autoOpen: false,
+					title: 'Konfirmasi',
+					resizable: false,
+					width: 500,
+					height: 150,
+					modal: true,
+					buttons: {
+						OK: function() {
+							$(this).dialog('close');
 						}
-					});
-			} );
+					}
+				});
+		} );
 
-		</script>
+	</script>
 
 	<title><?php echo $title;?></title>
 </head>

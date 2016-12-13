@@ -76,6 +76,18 @@
 					echo form_checkbox($pajak);
 				?>									
 			</td>
+		</tr>
+		<tr>
+			<th><?php echo form_label('Jenis Simpanan','simpanan'); ?></th>
+			<td>
+				<?php 
+					$simpanan['name'] = $simpanan['id'] = 'simpanan';
+					$simpanan['value'] = '1';
+					if ($account_data['simpanan'] == 1 || set_value('simpanan') == 1) $simpanan['checked'] = TRUE;
+					if ($act == 'view') $simpanan['disabled'] = TRUE;
+					echo form_checkbox($simpanan);
+				?>									
+			</td>
 		</tr>		
 		<tr>
 			<th><?php echo form_label('Keterangan','keterangan'); ?></th>

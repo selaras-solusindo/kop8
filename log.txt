@@ -1,3 +1,10 @@
+5:48 PM 12/13/2016
+- master akun ditambahi jenis simpanan;
+
+4:40 PM 12/13/2016
+- manajemen anggota :: done;
+- lanjut ke manajemen jenis simpanan;
+
 11:49 AM 12/1/2016
 - buat manajemen anggota
 - buat master jenis simpanan
