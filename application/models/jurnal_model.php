@@ -63,13 +63,32 @@ class Jurnal_model extends Model {
 
 	function get_data()
 	{
-		$this->db->select('jurnal.id, jurnal.tgl, jurnal.no, jurnal.keterangan, jurnal.f_id AS f_id, f.nama AS f_name, jurnal.proyek_id, proyek.nama as project_name, jurnal_detail.item, jurnal_detail.akun_id, akun.nama as account_name, akun.kelompok_akun_id, jurnal_detail.debit_kredit, jurnal_detail.nilai');
+		$this->db->select('
+			jurnal.id, 
+			jurnal.tgl, 
+			jurnal.no, 
+			jurnal.keterangan, 
+			jurnal.f_id AS f_id, 
+			f.nama AS f_name, 
+			jurnal.proyek_id, 
+			proyek.nama as project_name, 
+			jurnal_detail.item, 
+			jurnal_detail.akun_id, 
+			akun.nama as account_name, 
+			akun.kelompok_akun_id, 
+			jurnal_detail.debit_kredit, 
+			jurnal_detail.nilai, 
+			jurnal_detail.anggota_id
+			');
 		$this->db->from('jurnal');
 		$this->db->join('f', 'jurnal.f_id=f.id', 'INNER');
 		$this->db->join('jurnal_detail', 'jurnal_detail.jurnal_id=jurnal.id', 'INNER');
 		$this->db->join('akun', 'jurnal_detail.akun_id=akun.id', 'INNER');
 		$this->db->join('proyek', 'jurnal.proyek_id=proyek.id', 'LEFT');
+		$this->db->join('anggota', 'jurnal_detail.anggota_id=anggota.id', 'INNER');
 		$this->db->order_by('jurnal.tgl', 'asc');
+		$this->db->order_by('jurnal.no', 'asc');
+		$this->db->order_by('jurnal_detail.item', 'asc');
 		$query = $this->db->get();
 		if ($query->num_rows() > 0)
 		{
@@ -118,6 +137,7 @@ class Jurnal_model extends Model {
 		);
 		if($this->input->post('proyekID')) $this->data['proyek_id'] = $this->input->post('proyekID');
 		$akun = $this->input->post('akun');
+		$anggota = $this->input->post('anggota');
 		for ($i = 1; $i <= count($akun); $i++)
 		{
 			$debit = $this->input->post('debit'.$i);
@@ -138,7 +158,8 @@ class Jurnal_model extends Model {
 					'item' => $i,
 					'akun_id' => $akun[$i-1],
 					'debit_kredit' => $dk,
-					'nilai' => $value
+					'nilai' => $value,
+					'anggota_id' => $anggota[$i-1]
 					);
 			}
 		}

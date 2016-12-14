@@ -9,6 +9,7 @@ class Jurnal extends Controller {
 		$this->auth->check_user_authentification();
 		$this->load->model('jurnal_model');
 		$this->load->model('akun_model');
+		$this->load->model('anggota_model');
 		$this->load->helper('finance');
 	}
 
@@ -61,7 +62,9 @@ class Jurnal extends Controller {
 		$data['f_id'] = 1;
 		// edited by Adhe on 19.05.2010
 		$accounts = $this->akun_model->get_data_for_dropdown();
+		$anggotas = $this->anggota_model->get_data_for_dropdown();
 		$data['accounts'] = ($accounts) ? $accounts : array('-- Belum ada Akun --');
+		$data['anggotas'] = ($anggotas) ? $anggotas : array('-- Belum ada Aggota --');
 		// end
 		$this->load->view('layout/template', $data);
 	}
@@ -93,6 +96,7 @@ class Jurnal extends Controller {
 		$this->jurnal_model->set_id($id);
 		$data['journal_data'] = $this->jurnal_model->get_data();
 		$data['accounts'] = $this->akun_model->get_data_for_dropdown();
+		$data['anggotas'] = $this->anggota_model->get_data_for_dropdown();
 		$this->load->view('layout/template', $data);
 	}
 

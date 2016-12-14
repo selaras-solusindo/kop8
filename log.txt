@@ -1,3 +1,11 @@
+4:38 PM 12/14/2016
+- update database;
+- update jenis simpanan;
+- buat laporan mutasi per anggota;
+
+12:45 PM 12/14/2016
+- penambahan field anggota_id di tabel jurnal_detail;
+
 3:27 AM 12/14/2016
 - penambahan field jenis simpanan :: done;
 

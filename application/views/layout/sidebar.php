@@ -31,10 +31,10 @@
 			<div class="section-content">
 				<ul class="nice-list">
 					<li><?php echo anchor(site_url()."akun/detail_akun", 'Buku Besar &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."jurnal", 'Jurnal &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."jurnal/jurnal_umum", 'Jurnal Umum &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."jurnal/jurnal_penyesuaian", 'Jurnal Penyesuaian &#187;', 'class="more"'); ?></li>
-					<li><?php echo anchor(site_url()."jurnal/jurnal_penutup", 'Jurnal Penutup &#187;', 'class="more"'); ?></li>							
+					<li><?php echo anchor(site_url()."jurnal", 'View Jurnal &#187;', 'class="more"'); ?></li>
+					<li><?php echo anchor(site_url()."jurnal/jurnal_umum", 'Input Jurnal &#187;', 'class="more"'); ?></li>
+					<!--<li><?php echo anchor(site_url()."jurnal/jurnal_penyesuaian", 'Jurnal Penyesuaian &#187;', 'class="more"'); ?></li>
+					<li><?php echo anchor(site_url()."jurnal/jurnal_penutup", 'Jurnal Penutup &#187;', 'class="more"'); ?></li>-->
 				</ul>
 			</div>
 		</div>

@@ -106,6 +106,22 @@ class Anggota_model extends Model {
 		$delete = $this->db->delete('anggota');
 		return $delete;
 	}
+	
+	function get_data_for_dropdown()
+	{
+		$data = $this->get_all_data();
+		if($data) {
+			$anggota[0] = "Non-Anggota";
+			foreach ($data as $row) {
+				$anggota[$row->id] = $row->nama;
+			}
+			return $anggota;
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
 
 }
 

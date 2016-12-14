@@ -67,7 +67,8 @@
 		<tr>
 			<th>Akun</th>
 			<th>Debit</th>
-			<th>Kredit</th>																	
+			<th>Kredit</th>
+			<th>Anggota</th>
 		</tr>
 		<?php for ($i = 1; $i <= 2; $i++) { ?>
 			<tr>
@@ -97,11 +98,18 @@
 						echo form_input($data);
 					?>
 				</td>
+				<td>
+					<?php 
+						$anggota['id'] = 'anggota'.$i;
+						$anggota['class'] = 'combo';
+						echo form_dropdown('anggota[]', $anggotas, '' ,$anggota);
+					?>
+				</td>
 			</tr>
 		<?php } ?>
 	</table>
 	
-	<div class="addRow"><a href="javascript:addRow();">tambah baris</a></div>
+	<div class="addRow"><a href="javascript:addRow();">Tambah Baris</a></div>
 	
 	<div class="buttons">
 		<?php

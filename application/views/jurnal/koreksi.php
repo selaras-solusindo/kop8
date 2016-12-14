@@ -76,10 +76,11 @@
 		<tr>
 			<th>Akun</th>
 			<th>Debit</th>
-			<th>Kredit</th>																	
+			<th>Kredit</th>
+			<th>Anggota</th>
 		</tr>
 		<?php
-			$data['disabled'] = TRUE;
+			//$data['disabled'] = '';
 			$data['class'] = 'field';
 			$i = 1;
 			foreach ($journal_data as $row)
@@ -88,19 +89,26 @@
 				echo '<td>';
 				$akun['id'] = 'akun'.$i;
 				$akun['class'] = 'combo';
-				$akun['disabled'] = TRUE;
+				//$akun['disabled'] = '';
 				$selected = $row->akun_id;
 				echo form_dropdown('akun[]', $accounts, $selected ,$akun);
 				echo '</td>';
 				echo '<td>';
 				$data['id'] = $data['name'] = 'debit'.$i;
-				$data['value'] = (!$row->debit_kredit) ? $row->nilai : '' ;
+				$data['value'] = ($row->debit_kredit) ? $row->nilai : '' ;
 				echo form_input($data);
 				echo '</td>';
 				echo '<td>';
 				$data['id'] = $data['name'] = 'kredit'.$i;
-				$data['value'] = ($row->debit_kredit) ? $row->nilai : '' ;
+				$data['value'] = (!$row->debit_kredit) ? $row->nilai : '' ;
 				echo form_input($data);
+				echo '</td>';
+				echo '<td>';
+				$anggota['id'] = 'anggota'.$i;
+				$anggota['class'] = 'combo';
+				//$anggota['disabled'] = '';
+				$selected = $row->anggota_id;
+				echo form_dropdown('anggota[]', $anggotas, $selected ,$anggota);
 				echo '</td>';
 				echo '</tr>';
 				$i++;
