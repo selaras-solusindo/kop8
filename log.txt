@@ -1,3 +1,6 @@
+3:27 AM 12/14/2016
+- penambahan field jenis simpanan :: done;
+
 5:48 PM 12/13/2016
 - master akun ditambahi jenis simpanan;
 
